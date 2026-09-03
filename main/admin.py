@@ -66,7 +66,7 @@ class FashionAdmin(admin.ModelAdmin):
 @admin.register(FashionImageModel)
 class FashionImageAdmin(admin.ModelAdmin):
     readonly_fields = ("user_created", "user_modified", "created_date", "modified_date")
-    search_fields = ("product__product_name")
+    search_fields = ("product__product_name",)
     
     def save_model(self, request, obj, form, change):
         if change:
@@ -110,7 +110,7 @@ class TextileAdmin(admin.ModelAdmin):
 @admin.register(TextileImageModel)
 class TextileImageAdmin(admin.ModelAdmin):
     readonly_fields = ("user_created", "user_modified", "created_date", "modified_date")
-    search_fields = ("product__product_name")
+    search_fields = ("product__product_name",)
     
     def save_model(self, request, obj, form, change):
         if change:
